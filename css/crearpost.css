@@ -1,0 +1,87 @@
+
+
+body.crearpost-body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+}
+
+.crearpost-form {
+    background-color: rgba(30, 30, 30, 0.95);
+    padding: 25px;
+    border-radius: 16px;
+    max-width: 480px;
+    width: 90%;
+    box-sizing: border-box;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    color: #ffffff;
+}
+
+.crearpost-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #e0e0e0;
+    font-size: 0.95rem;
+}
+
+.crearpost-form input[type="text"],
+.crearpost-form textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #1f1f1f;
+    color: #f5f5f5;
+    border: 1px solid #333;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.crearpost-form input[type="text"]:focus,
+.crearpost-form textarea:focus {
+    outline: none;
+    border-color: #00bcd4;
+    box-shadow: 0 0 5px #00bcd4;
+}
+
+.crearpost-form textarea {
+    resize: vertical;
+}
+
+.crearpost-form button {
+    background-color: #00bcd4;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.crearpost-form button:hover {
+    background-color: #00a0b4;
+}
+
+@media screen and (max-width: 600px) {
+    .crearpost-form {
+        padding: 20px;
+        font-size: 0.9rem;
+    }
+
+    .crearpost-form button {
+        padding: 14px;
+        font-size: 1rem;
+    }
+}

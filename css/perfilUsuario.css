@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.body-perfil {
+    background-color: #1e1e2f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.perfil-header .navbar-perfil {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #262626;
+    z-index: 1000;
+}
+
+.Nombre-Usuario {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.main-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perfil-wrapper {
+    background-color: #2c2c3e;
+    padding: 15px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.1);
+    padding-bottom: 80px;
+}
+
+.foto-perfi-contenedor {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #00bcd4;
+}
+
+.foto-perfi-contenedor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.datos-perfil_contenedor {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: rgba(58, 58, 79, 0.9);
+    background-color: rgba(58, 58, 79, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.descripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; 
+    text-align: center; 
+}
+
+.descripcion p {
+    color: #000 !important;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 10px; 
+    line-height: 1.5; 
+}
+
+.descripcion i {
+    font-size: 1.2rem;
+    color: #00bcd4;
+}
+
+.perzonalizar-contenedor {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.perzonalizar-contenedor > div {
+    flex: 1 1 48%;
+}
+
+.Editar-perfil p, 
+.Editar-perfil button {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: none;
+}
+.Editar-perfil p, 
+.Editar-perfil button {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;  
+    margin: 0;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;   
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: none;
+    padding: 0 16px;  
+    background-color: #00bcd4;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Editar-perfil p a {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 44px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Editar-perfil button:hover,
+.Editar-perfil p:hover {
+    background-color: #0097a7;
+}
+
+.Editar-perfil button {
+    background-color: #00bcd4;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.Editar-perfil button:hover,
+.Editar-perfil p:hover {
+    background-color: #0097a7;
+}
+
+.habilidades-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.habilidades-contenedor > p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #00bcd4;
+    text-align: center;
+}
+
+.habilidad-card {
+    position: relative;
+    height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+}
+
+.habilidad-card p {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.insignias-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.insignias-contenedor img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.contenedor-recomendaciones {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.contenedor-recomendaciones > p {
+    color: #00bcd4;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.critica-contenedor {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.critica-contenedor p:first-child {
+    color: #bbbbbb;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.modal-foto {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.modal-contenido {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
+    animation: fadeIn 0.4s;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #00bcd4;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover {
+    color: white;
+}
+
+.boton-seguir {
+    padding: 8px 16px;
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.boton-seguir:hover {
+    background-color: #0097a7;
+}
+
+.link-seguidores,
+.link-seguidos {
+    color:  #000 !important;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.link-seguidores:hover,
+.link-seguidos:hover {
+    text-decoration: underline;
+}
+
+.lista-seguidores {
+    list-style: none;
+    padding-left: 0;
+}
+
+.seguidor-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.seguidor-item img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

@@ -1,0 +1,142 @@
+/* VARIABLES DE TEMA */
+:root {
+    --bg-body: linear-gradient(135deg, #1b1b2f, #252539);
+    --header-bg: #262626;
+    --user-bg: #2c2c3e;
+    --user-hover: #33334d;
+    --text-color: #f0f0f0;
+    --shadow-color: rgba(0, 188, 212, 0.1);
+    --border-color: #ffffff66;
+}
+
+body.claro {
+    --bg-body: linear-gradient(135deg, #f8f9fa, #e2e6ea);
+    --header-bg: #ffffff;
+    --user-bg: #e9ecef;
+    --user-hover: #dee2e6;
+    --text-color: #212529;
+    --shadow-color: rgba(0, 123, 255, 0.1);
+    --border-color: #cccccc;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body.usuarios-body {
+    background: var(--bg-body);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    min-height: 100vh;
+    padding: 20px 10px;
+}
+
+/* HEADER */
+.usuarios-header {
+    background-color: var(--header-bg);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.usuario-actual {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.usuario-actual .foto-perfil {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00bcd4;
+}
+
+.usuario-actual p {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* LISTADO DE USUARIOS */
+.usuarios-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.usuario {
+    background-color: var(--user-bg);
+    border-radius: 14px;
+    padding: 0.8rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 6px var(--shadow-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.usuario:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px var(--shadow-color);
+    border: 1px solid var(--border-color);
+}
+
+.usuario a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.usuario .foto-perfil {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00bcd4;
+    transition: transform 0.2s ease;
+}
+
+.usuario:hover .foto-perfil {
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .usuarios-header {
+        padding: 1rem;
+    }
+
+    .usuario {
+        padding: 0.7rem 1rem;
+    }
+
+    .usuario .foto-perfil {
+        width: 44px;
+        height: 44px;
+    }
+
+    .usuario-actual .foto-perfil {
+        width: 40px;
+        height: 40px;
+    }
+
+    .usuario-actual p {
+        font-size: 0.95rem;
+    }
+}

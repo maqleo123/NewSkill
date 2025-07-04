@@ -1,0 +1,103 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            font-family: 'Segoe UI', sans-serif;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader-container {
+            text-align: center;
+            color: #fff;
+            width: 90%;
+            max-width: 400px;
+            user-select: none;
+        }
+
+        .logo {
+            width: 40%;
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            animation: zoom 1.5s ease-in-out infinite alternate;
+            will-change: transform;
+        }
+
+        @keyframes zoom {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.05);
+            }
+        }
+
+        .titulo {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+            text-shadow: 0 0 8px #00bcd4aa;
+        }
+
+        .loader-bar {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            overflow: hidden;
+            height: 15px;
+            box-shadow: 0 0 15px #00bcd499 inset;
+            margin-bottom: 15px;
+        }
+
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: #00bcd4;
+            border-radius: 20px 0 0 20px;
+            transition: width 0.3s ease-out;
+            will-change: width;
+        }
+
+        .porcentaje {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffffffcc;
+            letter-spacing: 0.5px;
+            user-select: none;
+            opacity: 0.9;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Adaptativo */
+        @media (max-width: 480px) {
+            .logo {
+                width: 50%;
+                max-width: 120px;
+                margin-bottom: 15px;
+            }
+
+            .titulo {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+            .loader-bar {
+                height: 12px;
+                margin-bottom: 12px;
+            }
+
+            .porcentaje {
+                font-size: 1rem;
+            }
+        }

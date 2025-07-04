@@ -1,0 +1,121 @@
+:root {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --header-bg: #262626;
+    --menu-bg: #2a2a3a;
+    --menu-hover: #3a3a4f;
+    --menu-border: #444;
+}
+
+body.claro {
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --header-bg: #ffffff;
+    --menu-bg: #ffffff;
+    --menu-hover: #e9ecef;
+    --menu-border: #ced4da;
+}
+
+
+.header {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--header-bg);
+    border-top: 1px solid var(--menu-border);
+    z-index: 1000000;
+    padding: 8px 0;
+    width: 100%;
+}
+
+.listacontainer {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+
+.header_nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.header_nav-item {
+    flex: 1;
+    text-align: center;
+}
+
+.header_nav-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    border-radius: 10px;
+    transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.header_nav-item img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(1.2);
+    transition: filter 0.3s ease;
+    max-width: 100%;
+}
+
+.header_nav-item a:hover {
+    background-color: var(--menu-hover);
+    transform: scale(1.1);
+}
+
+.header_nav-item a.active {
+    background-color: #00bcd4;
+    box-shadow: 0 0 10px #00bcd4;
+    border-radius: 12px;
+}
+
+body.claro .header_nav-item img {
+    filter: brightness(0) invert(1);
+}
+
+
+.header_nav-item img {
+    width: 24px;
+    height: 24px;
+    transition: filter 0.3s ease, mix-blend-mode 0.3s ease;
+    mix-blend-mode: normal;
+}
+
+
+body.claro .header_nav-item img {
+    mix-blend-mode: multiply;
+    filter: brightness(0.2);
+}
+
+
+
+@media (max-width: 600px) {
+    .header_nav-list {
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .header_nav-item img {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@media (max-width: 400px) {
+    .header_nav-item img {
+        width: 20px;
+        height: 20px;
+    }
+}

@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #0f111a, #1a1c28);
+    color: #e0e0e0;
+    overflow: auto;
+}
+
+.chat-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    background-color: transparent;
+    user-select: text;
+}
+
+.chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background: #1c2532;
+    color: #f5f5f5;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    height: 70px;
+    flex-shrink: 0;
+    border-bottom: 1px solid #2b3544;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.volver {
+    color: #5ea1e9;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.volver:hover {
+    color: #3b82f6;
+}
+
+.perfil-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    overflow: hidden;
+}
+
+.foto-perfil {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #555b70;
+    border: 2px solid #3b82f6;
+}
+
+.perfil-info h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #d4d4d4;
+}
+
+.chat-box {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background-color: transparent;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #4a90e2 transparent;
+}
+
+.chat-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background-color: #4a90e2;
+    border-radius: 6px;
+}
+
+.input-area {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    background: #1e293b;
+    border-top: 1px solid #344054;
+    flex-shrink: 0;
+    position: sticky;
+    bottom: 0;
+    z-index: 20;
+    box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.35);
+}
+
+.input-area input[type="text"] {
+    flex-grow: 1;
+    padding: 14px 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1rem;
+    background-color: #273549;
+    color: #e0e0e0;
+    box-shadow: inset 0 0 5px #3b82f6aa;
+    outline: none;
+}
+
+.input-area input[type="text"]::placeholder {
+    color: #9ca3af;
+    font-weight: 300;
+}
+
+.input-area button {
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    color: white;
+    border: none;
+    margin-left: 14px;
+    border-radius: 50%;
+    padding: 16px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-area button:hover {
+    background: linear-gradient(135deg, #357abd, #2a62a4);
+    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.5);
+}
+
+.mensaje {
+    position: relative;
+    max-width: 75%;
+    padding: 16px 20px 26px 20px; /* espacio para .meta */
+    border-radius: 18px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    word-wrap: break-word;
+    color: #f0f0f0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+    user-select: text;
+    transition: background-color 0.3s ease;
+}
+
+.mensaje.entrante {
+    align-self: flex-start;
+    background: #2f3137;
+    border-radius: 18px 18px 18px 6px;
+}
+
+.mensaje.saliente {
+    align-self: flex-end;
+    background: #224a91;
+    border-radius: 18px 18px 6px 18px;
+}
+
+.mensaje.saliente:hover {
+    background: linear-gradient(145deg, #1e4ca8, #2e6fc2);
+    box-shadow: 0 0 14px #60a5fa;
+}
+
+.mensaje .meta {
+    position: absolute;
+    bottom: 8px;
+    right: 14px;
+    font-size: 0.7rem;
+    color: #9ca3af;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    user-select: none;
+}
+
+.visto {
+    color: #60a5fa;
+    font-weight: 700;
+}
+
+.no-visto {
+    color: #94a3b8;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .chat-header {
+        height: 56px;
+        padding: 10px 12px;
+    }
+
+    .perfil-info h3 {
+        font-size: 0.9rem;
+    }
+
+    .foto-perfil {
+        width: 36px;
+        height: 36px;
+    }
+
+    .input-area {
+        padding: 12px 14px;
+        gap: 10px;
+    }
+
+    .input-area input[type="text"] {
+        font-size: 0.95rem;
+        padding: 12px 16px;
+    }
+
+    .input-area button {
+        padding: 14px;
+        font-size: 1rem;
+    }
+
+    .mensaje {
+        max-width: 90%;
+        font-size: 0.9rem;
+        padding: 12px 16px 24px 16px;
+    }
+
+    .mensaje .meta {
+        font-size: 0.65rem;
+        bottom: 6px;
+        right: 10px;
+    }
+}

@@ -1,0 +1,204 @@
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('../imagenes/pexels-lulizler-3165335.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #e0e0e0;
+}
+
+/* Header */
+.header-Relaciones {
+    background-color: rgba(20, 20, 20, 0.8);
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    border-bottom: 1px solid #333;
+}
+
+/* Publicaciones container */
+.publicaciones-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Botón de publicar */
+.publicar-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgba(30, 30, 30, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px auto;
+    width: fit-content;
+}
+
+.publicar-box img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.publicar-box a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Post card */
+.post-card {
+    background-color: rgba(30, 30, 30, 0.9);
+    border: 1px solid #444;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    backdrop-filter: blur(5px);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.user-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.skill {
+    font-size: 14px;
+    color: #999;
+}
+
+.titulo {
+    font-size: 20px;
+    color: #00bcd4;
+    margin: 10px 0;
+}
+
+.post-content {
+    font-size: 16px;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Footer del post */
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-date {
+    font-size: 13px;
+    color: #888;
+}
+
+.contact-btn {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #0097a7;
+}
+
+.contact-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Comentarios */
+#comentarios {
+    margin-top: 15px;
+}
+
+button.toggle-comentarios {
+    background-color: #2d2d2d;
+    color: #ccc;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button.toggle-comentarios:hover {
+    background-color: #444;
+}
+
+/* Caja de comentario */
+.comentario {
+    background-color: rgba(40, 40, 40, 0.8);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.comentario img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comentario strong a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.comentario small {
+    color: #888;
+}
+
+/* Formulario de comentarios */
+textarea {
+    background-color: #1f1f1f;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 8px;
+    resize: none;
+}
+
+button[type="submit"] {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0097a7;
+}
